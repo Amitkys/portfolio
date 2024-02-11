@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- dynamic typing -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- nav logo or extra on remixicon site: cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- just add or operator and add font name within given double quote -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora|Space Grotesk|Poppins|Karla">
+    <!-- css file -->
+    <link rel="stylesheet" href="style/style.css">
+</head> 
+
+<body class="">  
+    <!-- navigation-bar -->
+    <header id="navigation-bar" class="bg-[#222327]">
+        <a href="#" class="logo"><i class="ri-terminal-box-fill"></i> <span> Amit</span></a>
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+      
+        <div class="main">
+            <a href="" class="user"><i class="ri-github-fill"></i></a>
+            <a href="">Resume</a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+ <!-- main page heading  -->
+    <div class="grid lg:grid-cols-3 grid-cols-1 bg-[#040404]" id="main-heading">
+        <h2 class="lg:col-span-2 text-[60px] lg:text-[120px] text-center lg:pt-[50px]" style="font-family: 'Karla';">Amit, a <br><span class="text-green-500 font-semibold lg:font-bold" style="font-family: 'Space Grotesk';" id="auto-type-heading"></span></h2>
+        <div class="text-center"><img src="logo/kys-heading-pic.jpg" alt=""></div>
+        
+    </div>
+    <!-- all about project  -->
+    <div id="project-prev" class="bg-gray">
+        <!-- first project  -->
+        <div class="flex justify-end overflow-hidden" >
+            <div class="bg-[#040404] lg:w-[60%] w-[90%]   text-center " id="project-right" data-aos="fade-left" data-aos-duration="1200">
+                <h3 class="text-[28px] font-semibold lg:text-[40px]">Pomo-Doro Timer</h3>
+                <ul class="flex flex-row justify-around  mt-3">
+                    <li><a href="#"  class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-timer-fill text-white"></i> Time Slots.</a></li>
+                    <li><a href="" class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-music-2-fill text-white"></i> Random Music.</a></li>
+                    <li><a href="" class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-pause-circle-line text-white"></i> Music can be Control.</a></li>
+                    
+                </ul>
+                <!-- project button with smooth color -->
+                <ul class="flex justify-around mt-3 lg:mt-5">
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">Live</button></li>
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">Repo</button></li>
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">About</button></li>    
+                </ul>
+            </div>
+        </div>
+        <!-- second project -->
+        <div class="flex justify-start ">
+            <div class="bg-[#040404] lg:w-[75%] w-[90%]   text-center " id="project-left" data-aos="fade-right" data-aos-duration="1200">
+                <h3 class="text-[28px] font-semibold lg:text-[40px]">Guess Random Number</h3>
+                <ul class="flex flex-row justify-around  mt-3">
+                    <li><a href="#"  class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-timer-fill text-white"></i> Guessing Number 1-5</a></li>
+                    <li><a href="" class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-music-2-fill text-white"></i> 3 chance to Guess.</a></li>
+                    <li><a href="" class="lg:text-[24px] text-[18px] text-green-500"><i class="ri-pause-circle-line text-white"></i> Stored Prev. Guess.</a></li>
+                    
+                </ul>
+                <!-- project button with smooth color -->
+                <ul class="flex justify-around mt-3 lg:mt-5">
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">Live</button></li>
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">Repo</button></li>
+                    <li><button id="project-button" class="py-[4px] px-[10px] lg:px-[18px] text-[24px] font-semibold  bg-yellow-600 text-black transition-colors duration-300 ease-in-out hover:bg-yellow-400 ">About</button></li>    
+                </ul>
+            </div>
+        </div>
+        <div class="flex justify-end ">
+            <div class="bg-[#040404] lg:w-[60%] w-[75%] text-center" id="project-right">Hello World</div>
+        </div>
+        <div class="flex justify-start ">
+            <div class="bg-[#040404] lg:w-[60%] w-[75%] text-center" id="project-left">Hello World</div>
+        </div>
+    </div>
+ 
+
+
+
+
+<!-- animation part -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // add animation in those element who have heigh and width
+        // otherwise you might face overflow issue
+      AOS.init();
+    </script>
+<script src="JavaScript/index.js"></script>
+</body>
+</html>
