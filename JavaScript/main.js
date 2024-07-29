@@ -23,3 +23,4 @@ window.onresize = () => {
     navbar.style.right = ''; // Reset the style when closing the navbar
   }
 }
+
