@@ -154,6 +154,36 @@
     }
   }
 /* project preview started from here  */
+.gradient-text-project-desc {
+  background: linear-gradient(to right, #64748B 50%, #166534 120%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* use to select background-color: black with text color: liner gradient  */
+.gradient-text-project-mini {
+  position: relative;
+  background-color: black;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.gradient-text-project-mini::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #16A34A, #EAB308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+
 #tech-stack{
   font-family: "Playwrite AT", cursive;
 }
