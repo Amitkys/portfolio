@@ -26,41 +26,44 @@ window.onresize = () => {
 
 // caraousal
 document.addEventListener('DOMContentLoaded', function() {
-  const slides = document.querySelectorAll('.carousel-slide');
-  const indicators = document.querySelectorAll('.indicator');
-  let currentIndex = 0;
+  const carousels = document.querySelectorAll('.carousel');
 
-  const updateCarousel = () => {
-    document.querySelector('.carousel-track').style.transform = `translateX(-${currentIndex * 100}%)`;
-    indicators.forEach((indicator, index) => {
-      if (index === currentIndex) {
-        indicator.classList.add('active');
-        indicator.classList.remove('bg-opacity-50');
-      } else {
-        indicator.classList.remove('active');
-        indicator.classList.add('bg-opacity-50');
-      }
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const indicators = carousel.querySelectorAll('.indicator');
+    let currentIndex = 0;
+
+    const updateCarousel = () => {
+      carousel.querySelector('.carousel-track').style.transform = `translateX(-${currentIndex * 100}%)`;
+      indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+          indicator.classList.add('active');
+          indicator.classList.remove('bg-opacity-50');
+        } else {
+          indicator.classList.remove('active');
+          indicator.classList.add('bg-opacity-50');
+        }
+      });
+    };
+
+    carousel.querySelector('.prev').addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+      updateCarousel();
     });
-  };
 
-  document.getElementById('prev').addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+    carousel.querySelector('.next').addEventListener('click', () => {
+      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    });
+
+    // Auto-slide functionality 
+    /*
+    const autoSlideInterval = 3000;
+    setInterval(() => {
+      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel();
+    }, autoSlideInterval);
+*/
     updateCarousel();
   });
-
-  document.getElementById('next').addEventListener('click', () => {
-    currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-    updateCarousel();
-  });
-
-  // Auto-slide functionality
-  // const autoSlideInterval = 3000;
-  // setInterval(() => {
-  //   currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-  //   updateCarousel();
-  // }, autoSlideInterval);
-
-  updateCarousel();
 });
-
-
